@@ -1,0 +1,224 @@
+/*Body design and animations*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif);
+  overflow-x: hidden;
+  font-family: "IBM Plex Sans", sans-serif;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*content*/
+
+.content {
+  position: relative;
+  padding: 8% 15% 0 8%;
+  color: #000;
+  z-index: 5;
+}
+
+/*object*/
+
+.object {
+  opacity: 0.85;
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  background-color: #23282c;
+  transform: skewX(-2.5deg) translateX(-15%);
+  border: 3px solid #3d3d3d;
+  box-shadow: 60px 60px 68px #1b2d4dc9;
+}
+
+/* Welcome */
+
+h1 {
+  background-size: cover;
+  color: #c0c0c0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4.1vw;
+
+  animation: h1 1.8s;
+  text-shadow: 2px 0 rgb(0, 0, 0), -2px 0 rgb(0, 0, 0), 0 2px rgb(0, 0, 0),
+    0 -2px rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px rgb(0, 0, 0),
+    -1px 1px rgb(0, 0, 0), 1px -1px rgb(0, 0, 0);
+}
+
+#i_con {
+  width: 30%;
+  height: 30%;
+}
+
+@keyframes h1 {
+  from {
+    margin-top: -55%;
+    width: 100%;
+  }
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
+
+/*auto messages*/
+h2 {
+  font-size: 2.2vw;
+  margin-top: 3%;
+  padding-top: 3%;
+  margin-left: 10%;
+  color: #ffcc66;
+  text-shadow: 3px 3px 8px rgba(145, 40, 40, 0.548);
+}
+
+/* button */
+
+.cta {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #b33e3e;
+  color: #565f2d;
+  box-sizing: border-box;
+  width: 60%;
+  margin-top: 13%;
+  margin-left: 20%;
+  border-radius: 20px;
+  border: 3px solid #0f0f0f;
+  box-shadow: 4px 4px 4px 4px #0f0f0f;
+}
+
+h6 {
+  color: #202020;
+  font-size: 1.7vw;
+  font-weight: bold;
+  padding: 1%;
+  font-family: monospace;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+h6 span {
+  transition: 0.5s linear;
+}
+h6:hover span:nth-child(1) {
+  margin-right: 5px;
+}
+
+h6:hover span:nth-child(2) {
+  margin-left: 30px;
+}
+h6:hover span {
+  color: rgba(255, 255, 255, 0.555);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.548),
+    0 0 2px rgba(255, 255, 255, 0.527), 0 0 2px rgba(255, 255, 255, 0.527);
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 968px) {
+  .content {
+    padding: 17% 8% 0 5%;
+  }
+
+  .cta {
+    margin-top: 25%;
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 6vw;
+    text-shadow: none;
+  }
+
+  h2 {
+    font-size: 4vw;
+    margin-left: 5%;
+  }
+
+  h6 {
+    font-size: 3vw;
+    padding: 2%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 20% 8% 0 5%;
+  }
+
+  .cta {
+    margin-top: 25%;
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 6vw;
+    text-shadow: none;
+  }
+
+  h2 {
+    font-size: 4vw;
+    margin-left: 5%;
+  }
+
+  h6 {
+    font-size: 3vw;
+    padding: 2%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    padding: 30% 8% 0 5%;
+  }
+
+  .cta {
+    margin-top: 25%;
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 8vw;
+    text-shadow: none;
+  }
+
+  h2 {
+    font-size: 6vw;
+    margin-left: 5%;
+  }
+
+  h6 {
+    font-size: 4vw;
+    padding: 2%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .content {
+    padding: 40% 8% 0 4%;
+  }
+
+  h1 {
+    font-size: 9vw;
+  }
+
+  h2 {
+    font-size: 7vw;
+  }
+}
